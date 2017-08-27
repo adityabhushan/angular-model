@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="store">
+
+<head>
+    <title>Learn Angular</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-controller="StoreController as store">
+    <ul>
+        <li ng-repeat="product in store.products" ng-init="tab=1">
+            <h1>Product Name : {{product.name}} </h1>
+            <h2> Product Price : {{product.price | currency}} </h2>
+            <p> Product Description : {{product.description}} </p>
+            <button ng-show="product.canPurchase"> Add to cart </button>
+            <a href ng-click="tab=1">Description</a>
+            <a href ng-click="tab=3">Reviews</a>
+            <a href ng-click="tab=2">Specifications</a>
+            <p ng-show="tab === 1">
+                This is Description
+            </p>
+            <p ng-show="tab == 2">
+                This is Spechs
+            </p>
+            <p ng-show="tab === 3">
+                This is Reviews
+            </p>
+        </li>
+
+    </ul>
+</body>
+
+</html>

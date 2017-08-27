@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn Angular</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-app="report" ng-controller="reportCtrl" layout="column">
+    <section layout="row" flex="20" style="min-height:150px;">
+        <div flex="50"></div>
+        <div flex="25" style="background:#9966ff"></div>
+        <div flex="25" style="background:#ff0000"></div>
+    </section>
+    <md-divider></md-divider>
+    <section layout="row" flex layout-padding>
+        <div flex="50" layout-padding>
+            <md-input-container>
+                <Label>Enter Title</Label>
+                <input type="text" ng-model="title" />
+            </md-input-container>
+            <md-datepicker ng-model="date" md-placeholder="Enter Date"></md-datepicker>
+        </div>
+        <md-divider></md-divider>
+        <div flex="50" layout-padding>
+            <h2>{{title}}</h2><br />
+            <h5>{{date}}</h5>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "learn-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "dependencies": {
+        "express": "^4.10.2",
+        "nodemon": "^1.11.0",
+        "path": "^0.12.7"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodejs start.js",
+        "dev": "nodemon -w ./ -x npm run start"
+},
+  "author": "Aditya",
+  "license": "ISC"
+}
